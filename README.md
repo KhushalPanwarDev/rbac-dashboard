@@ -1,82 +1,131 @@
-# RBAC Admin Dashboard
+# RBAC Dashboard
 
-## Project Overview
-A Role-Based Access Control (RBAC) Admin Dashboard built with React, TypeScript, and Ant Design, providing comprehensive user and role management capabilities.
+## Overview
+
+This RBAC (Role-Based Access Control) Dashboard is a React-based web application that provides a comprehensive interface for managing users and roles within an organization. The dashboard allows administrators to create, edit, and delete users, as well as define and manage roles with specific permissions.
+
+## Features
+
+### User Management
+- Add new users
+- Edit existing user details
+- Delete users
+- Filter and search users
+- Assign roles to users
+- Toggle user status (active/inactive)
+
+### Role Management
+- Create custom roles
+- Define granular permissions for each role
+- Edit existing roles
+- Search and filter roles
+
+### Key Capabilities
+- Responsive design (mobile and desktop-friendly)
+- Intuitive user interface
+- Search functionality for users and roles
+- Pagination support
+- Dropdown actions for quick user and role management
+- Notification system for user feedback
+
+## Technologies Used
+
+- React
+- Ant Design (antd)
+- TypeScript
+- Tailwind CSS
 
 ## Prerequisites
-- Node.js (v16+ recommended)
+
+- Node.js (v14 or later)
 - npm or Yarn
-- React 18+
-- TypeScript
 
-## Dependencies
-- `react`: Core library
-- `antd`: UI Component Library
-- `@ant-design/icons`: Icon set
-- `typescript`: Type checking
+## Installation
 
-## Project Setup
+1. Clone the repository:
+   ```bash
+   git clone https://your-repository-url.git
+   cd rbac-dashboard
+   ```
 
-### Installation
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/rbac-admin-dashboard.git
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-# Navigate to project directory
-cd rbac-admin-dashboard
+3. Start the development server:
+   ```bash
+   npm start
+   # or
+   yarn start
+   ```
 
-# Install dependencies
-npm install
-# OR
-yarn install
+## Project Structure
+
+```
+rbac-dashboard/
+│
+├── src/
+│   ├── components/
+│   │   └── RbacDashboard.tsx
+│   ├── types/
+│   │   └── index.ts
+│   └── styles/
+│       └── RbacDashboard.css
 ```
 
-### Running the Project
-```bash
-# Start development server
-npm start
-# OR
-yarn start
-```
+## Configuration
 
-## Environment Configuration
-Create a `.env` file in the project root with the following variables:
-```
-REACT_APP_API_URL=your_backend_api_url
-REACT_APP_AUTH_TOKEN=your_authentication_token
-```
+### Permissions
+The dashboard supports the following default permissions:
+- read
+- write
+- delete
+- manage_users
+- create_content
+- approve_content
+
+You can easily extend or modify these in the `PERMISSION_OPTIONS` array.
+
+## Customization
+
+### Adding New Permissions
+1. Update the `PERMISSION_OPTIONS` array in the `RbacDashboard.tsx` file
+2. Modify the role creation form to include new permissions
+
+### Styling
+The dashboard uses Tailwind CSS for responsive design. Customize the styles in the existing CSS file or by modifying Tailwind classes.
 
 ## Deployment
-### Vercel
-```bash
-# Install Vercel CLI
-npm i -g vercel
 
-# Deploy
-vercel
+### Build for Production
+```bash
+npm run build
+# or
+yarn build
 ```
 
-### Netlify
-```bash
-# Install Netlify CLI
-npm install netlify-cli -g
+## Mock Data
 
-# Deploy
-netlify deploy
-```
-
-## Security Considerations
-- Use environment variables for sensitive configurations
-- Implement proper backend authentication
-- Validate and sanitize all user inputs
-- Use HTTPS for all communications
+The dashboard includes initial mock data for users and roles. Replace these with your actual data source or connect to a backend API.
 
 ## Contributing
+
 1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## License
-MIT License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## Contact
+
+Name - Khushal Panwar
+Email - khushalpanwar0669@gmail.com
+
+Project Link: [https://github.com/your-username/rbac-dashboard]()
